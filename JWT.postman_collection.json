@@ -1,0 +1,50 @@
+{
+	"variables": [],
+	"info": {
+		"name": "JWT",
+		"_postman_id": "65b5847d-deca-cc0e-c5c0-988b233d2b73",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "First Generate Token",
+			"request": {
+				"url": "http://localhost:5000/api/login",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "JWT Token"
+			},
+			"response": []
+		},
+		{
+			"name": "Use Token (30 sec)",
+			"request": {
+				"url": "http://localhost:5000/api/posts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMDEsInVzZXJuYW1lIjoiRGFycGFuIiwiZW1haWwiOiJkYXJwYW5AZ21haWwuY29tIn0sImlhdCI6MTYyNjM1Njc0MSwiZXhwIjoxNjI2MzU2NzcxfQ.uQiFMVcnn_01DIqUUC_e1n0XphYoVW-nk_RVBpmQvR4",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "JWT1"
+			},
+			"response": []
+		},
+		{
+			"name": "Checking",
+			"request": {
+				"url": "http://localhost:5000/api",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "JWT2"
+			},
+			"response": []
+		}
+	]
+}
